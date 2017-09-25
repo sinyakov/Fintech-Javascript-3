@@ -7,7 +7,7 @@
 
 const getMinMax = string =>
   string
-    .match(/-?\d+(.\d+|)/g)
+    .match(/-?\d+(\.\d+|)/g)
     .map(str => Number(str))
     .reduce(
       (acc, curr) => ({
