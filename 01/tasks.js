@@ -84,30 +84,30 @@ const fibonacciWithCache = x => {
  *  1  5  9
  *  2  6 10
  *  3  7 11
- * @param  {number} maxNumber  максимальное число (до 99)
- * @param  {number} maxCols количество столбцов
+ * @param  {number} max  максимальное число (до 99)
+ * @param  {number} cols количество столбцов
  * @return {string}
  */
-const printNumbers = (maxNumber, maxCols) => {
-  let cols = maxCols;
+const printNumbers = (max, cols) => {
+  const rows = Math.ceil((max + 1) / cols);
+  const remainder = cols * rows - max;
 
-  while ((maxNumber + 1) % cols) {
-    cols -= 1;
+  if (remainder > cols && remainder < rows) {
+    return Array.from(new Array(rows), x => 0)
+      .map((row, i) =>
+        Array.from(new Array(i <= max % rows ? cols : cols - 1), x => 0)
+          .map((col, j) => (j * rows + i).toString().padStart(2))
+          .join(' ')
+      )
+      .join('\n');
   }
-
-  const rows = (maxNumber + 1) / cols;
-  const table = [];
-
-  for (let i = 0; i < rows; i++) {
-    const line = [];
-
-    for (let j = 0; j < cols; j++) {
-      line.push(i + j * rows);
-    }
-
-    table.push(line.map(x => x.toString().padStart(2)).join(' '));
-  }
-  return table.join('\n');
+  return Array.from(new Array(rows), x => 0)
+    .map((row, i) =>
+      Array.from(new Array(i !== rows - 1 ? cols : max % cols + 1), x => 0)
+        .map((col, j) => (j < max % cols + 1 ? j * rows + i : j * (rows - 1) + i + max % cols + 1).toString().padStart(2))
+        .join(' ')
+    )
+    .join('\n');
 };
 /* ============================================= */
 
