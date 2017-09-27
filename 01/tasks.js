@@ -52,24 +52,20 @@ const fibonacciSimple = x => {
  * @return {number} число под номером х
  */
 const fibonacciWithCache = x => {
-  const fib = new Map();
+  const fib = [0, 1];
 
   const calculate = n => {
-    if (fib.has(n)) {
-      return fib.get(n);
+    if (n in fib) {
+      return fib[n];
     }
-
-    let fibN;
 
     if (n < 0) {
-      fibN = n % 2 ? calculate(-n) : -calculate(-n);
-    } else if (n === 0 || n === 1) {
-      fibN = n;
-    } else {
-      fibN = calculate(n - 1) + calculate(n - 2);
+      fib[n] = n % 2 ? calculate(-n) : -calculate(-n);
+      return fib[n];
     }
-    fib.set(n, fibN);
-    return fibN;
+
+    fib[n] = calculate(n - 1) + calculate(n - 2);
+    return fib[n];
   };
 
   return calculate(x);
