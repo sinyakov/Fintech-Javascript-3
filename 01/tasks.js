@@ -5,17 +5,25 @@
  * '1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028' => { min: -1028, max: 15 }
  */
 
-const getMinMax = string =>
-  string
-    .match(/-?\d+(\.\d+|)/g)
-    .map(str => Number(str))
-    .reduce(
-      (acc, curr) => ({
-        min: curr < acc.min ? curr : acc.min,
-        max: curr > acc.max ? curr : acc.max
-      }),
-      { min: Infinity, max: -Infinity }
-    );
+const getMinMax = string => {
+  const numbers = string.match(/-?\d+(\.\d+)?/g);
+
+  if (!numbers) {
+    throw new Error('Строка не содержит чисел');
+  }
+
+  return numbers.reduce(
+    (acc, curr) => {
+      const currNum = parseFloat(curr);
+
+      return {
+        min: currNum < acc.min ? currNum : acc.min,
+        max: currNum > acc.max ? currNum : acc.max
+      };
+    },
+    { min: Infinity, max: -Infinity }
+  );
+};
 
 /* ============================================= */
 
