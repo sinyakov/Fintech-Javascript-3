@@ -90,14 +90,13 @@ const fibonacciWithCache = x => {
  */
 const printNumbers = (max, cols) => {
   const rows = Math.ceil((max + 1) / cols);
+  const lastRowLength = max % cols + 1;
 
-  return Array.from(new Array(rows), x => 0)
-    .map((row, i) =>
-      Array.from(new Array(i !== rows - 1 ? cols : max % cols + 1), x => 0)
-        .map((col, j) => (j < max % cols + 1 ? j * rows + i : j * (rows - 1) + i + max % cols + 1).toString().padStart(2))
-        .join(' ')
-    )
-    .join('\n');
+  return Array.from({ length: rows }, (_, i) =>
+    Array.from({ length: i < rows - 1 ? cols : lastRowLength }, (_, j) =>
+      (j < lastRowLength ? j * rows + i : j * (rows - 1) + i + lastRowLength).toString().padStart(2)
+    ).join(' ')
+  ).join('\n');
 };
 /* ============================================= */
 
