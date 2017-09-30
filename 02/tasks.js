@@ -2,13 +2,11 @@
  * Исправьте проблему с таймером: должны выводиться числа от 0 до 9.
  * Доп. задание: предложите несколько вариантов решения.
  */
-function timer(logger = console.log) {
-  for (let i = 0; i < 10; i++) {
-    setTimeout(() => {
-      logger(i);
-    }, 100);
+const timer = (logger = console.log) => {
+  for (var i = 0; i < 10; i++) {
+    setTimeout((x => () => logger(x))(i), 100);
   }
-}
+};
 
 /*= ============================================ */
 
@@ -19,10 +17,7 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-function customBind(func, context, ...args) {
-  console.log(context);
-  return func.bind(context, ...args);
-}
+const customBind = (func, context, ...args) => (...bindArgs) => func.call(context, ...args, ...bindArgs);
 
 /*= ============================================ */
 
@@ -32,11 +27,15 @@ function customBind(func, context, ...args) {
  * sum(1)(2)(3)( ) // 6
  * sum :: Number -> sum
  * sum :: void -> Number
+ * @param {(number|Void)} a
+ * @return {(Function|number)}
  */
-function sum(x) {
-  return 0;
-}
-
+const sum = a => {
+  if (a === undefined) {
+    return 0;
+  }
+  return x => (x === undefined ? a : sum(a + x));
+};
 /*= ============================================ */
 
 /**
@@ -45,31 +44,35 @@ function sum(x) {
  * @param {string} second
  * @return {boolean}
  */
-function anagram(first, second) {
-  return false;
-}
+const anagram = (first, second) =>
+  first.length === second.length
+  && first
+    .split('')
+    .sort()
+    .join() ===
+    second
+      .split('')
+      .sort()
+      .join();
 
 /*= ============================================ */
 
 /**
  * Сократите массив до набора уникальных значений
  * [1,1, 2, 6, 3, 6, 2] → [1, 2, 3, 6]
- * @param {Array<number>} исходный массив
+ * @param {Array<number>} arr исходный массив
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getUnique(arr) {
-  return [];
-}
+const getUnique = arr => [...new Set(arr)].sort((a, b) => a - b);
 
 /**
  * Найдите пересечение двух массивов
  * [1, 3, 5, 7, 9] и [1, 2, 3, 4] → [1, 3]
- * @param {Array<number>, Array<number>} first, second исходные массивы
+ * @param {Array<number> first исходные массивы
+ * @param {Array<number> second
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getIntersection(first, second) {
-  return [];
-}
+const getIntersection = (first, second) => first.filter(x => second.includes(x)).sort((a, b) => a - b);
 
 /* ============================================= */
 
@@ -86,9 +89,20 @@ function getIntersection(first, second) {
  * @param  {string} right
  * @return {boolean}
  */
-function isIsomorphic(left, right) {
+const isIsomorphic = (left, right) => {
+  if (left.length !== right.length) {
+    return false;
+  }
 
-}
+  const leftArray = left.split('');
+
+  for (let i = 0; i < left.length; i++) {
+    if (leftArray.map(x => (x === left[i] ? right[i] : x)).join('') === right) {
+      return true;
+    }
+  }
+  return false;
+};
 
 module.exports = {
   timer,
