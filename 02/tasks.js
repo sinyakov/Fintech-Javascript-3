@@ -72,7 +72,13 @@ const getUnique = arr => [...new Set(arr)].sort((a, b) => a - b);
  * @param {Array<number> second
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-const getIntersection = (first, second) => first.filter(x => second.includes(x)).sort((a, b) => a - b);
+const getIntersection = (first, second) =>
+  getUnique(first).reduce((acc, curr) => {
+    const firstFiltered = first.filter(x => x === curr);
+    const secondFiltered = second.filter(x => x === curr);
+
+    return firstFiltered.length < secondFiltered.length ? [...acc, ...firstFiltered] : [...acc, ...secondFiltered];
+  }, []);
 
 /* ============================================= */
 
