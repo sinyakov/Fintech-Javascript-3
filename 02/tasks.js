@@ -89,20 +89,8 @@ const getIntersection = (first, second) => first.filter(x => second.includes(x))
  * @param  {string} right
  * @return {boolean}
  */
-const isIsomorphic = (left, right) => {
-  if (left.length !== right.length) {
-    return false;
-  }
-
-  const leftArray = left.split('');
-
-  for (let i = 0; i < left.length; i++) {
-    if (leftArray.map(x => (x === left[i] ? right[i] : x)).join('') === right) {
-      return true;
-    }
-  }
-  return false;
-};
+const isIsomorphic = (left, right) =>
+  left.length === right.length && left.split('').reduce((acc, curr, index) => acc + (curr !== right[index] ? 1 : 0), 0) <= 1;
 
 module.exports = {
   timer,

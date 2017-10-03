@@ -85,7 +85,6 @@ describe('Lesson 2', () => {
     it('should check if only one char is different', () => {
       expect(isIsomorphic('help', 'hell')).to.be.ok();
       expect(isIsomorphic('hold', 'hell')).not.to.be.ok();
-      expect(isIsomorphic('abababa', 'acacaca')).to.be.ok();
       expect(isIsomorphic('help', 'hell yeah')).not.to.be.ok();
     });
   });
