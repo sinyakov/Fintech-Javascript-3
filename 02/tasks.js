@@ -44,16 +44,21 @@ const sum = a => {
  * @param {string} second
  * @return {boolean}
  */
-const anagram = (first, second) =>
-  first.length === second.length
-  && first
-    .split('')
-    .sort()
-    .join() ===
-    second
-      .split('')
-      .sort()
-      .join();
+const anagram = (first, second) => {
+  const dict = new Array(256);
+
+  dict.fill(0);
+
+  for (let i = 0; i < first.length; i++) {
+    dict[first[i].charCodeAt(0)]++;
+  }
+
+  for (let i = 0; i < second.length; i++) {
+    dict[second[i].charCodeAt(0)]--;
+  }
+
+  return dict.every(x => !x);
+};
 
 /*= ============================================ */
 
