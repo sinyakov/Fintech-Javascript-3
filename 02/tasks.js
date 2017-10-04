@@ -45,18 +45,18 @@ const sum = a => {
  * @return {boolean}
  */
 const anagram = (first, second) => {
+  if (first.length !== second.length) {
+    return false;
+  }
+
   const dict = new Array(65536);
 
   dict.fill(0);
 
   for (let i = 0; i < first.length; i++) {
-    dict[first[i].charCodeAt(0)]++;
+    dict[first[i].charCodeAt(0)] += 1;
+    dict[second[i].charCodeAt(0)] -= 1;
   }
-
-  for (let i = 0; i < second.length; i++) {
-    dict[second[i].charCodeAt(0)]--;
-  }
-
   return dict.every(x => !x);
 };
 
