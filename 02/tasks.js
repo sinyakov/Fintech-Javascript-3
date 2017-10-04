@@ -45,7 +45,7 @@ const sum = a => {
  * @return {boolean}
  */
 const anagram = (first, second) => {
-  const dict = new Array(256);
+  const dict = new Array(65536);
 
   dict.fill(0);
 
