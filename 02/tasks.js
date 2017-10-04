@@ -73,8 +73,8 @@ const getUnique = arr => [...new Set(arr)].sort((a, b) => a - b);
 /**
  * Найдите пересечение двух массивов
  * [1, 3, 5, 7, 9] и [1, 2, 3, 4] → [1, 3]
- * @param {Array<number> first исходные массивы
- * @param {Array<number> second
+ * @param {Array<number>} first исходные массивы
+ * @param {Array<number>} second
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 const getIntersection = (first, second) =>
