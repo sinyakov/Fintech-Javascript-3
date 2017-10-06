@@ -5,8 +5,9 @@
  * @return {Promise}
  */
 
-function promiseRace(promises) {
-  return Promise.resolve(null);
-}
+const promiseRace = promises =>
+  new Promise((resolve, reject) =>
+    promises.forEach(promise => promise.then(resolve).catch(reject))
+  );
 
 module.exports = promiseRace;
