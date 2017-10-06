@@ -5,8 +5,16 @@
  * @param {Array<Promise>} promises - массив с исходными промисами
  * @return {Promise}
  */
-function promiseAll(promises) {
-  return Promise.resolve(null);
-}
+const promiseAll = promises => {
+  const resolveValues = [];
+
+  return promises
+    .reduce(
+      (acc, curr) =>
+        acc.then(() => curr).then(resolve => resolveValues.push(resolve)),
+      Promise.resolve()
+    )
+    .then(() => resolveValues);
+};
 
 module.exports = promiseAll;
