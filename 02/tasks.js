@@ -3,7 +3,7 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (let i = 0; i < 10; i++) {
+  for (var i = 0; i < 10; i++) {
     setTimeout(() => {
       logger(i);
     }, 100);
@@ -20,8 +20,6 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-  console.log(context);
-  return func.bind(context, ...args);
 }
 
 /*= ============================================ */
