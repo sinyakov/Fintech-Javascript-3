@@ -5,16 +5,25 @@
  * @param {Array<Promise>} promises - массив с исходными промисами
  * @return {Promise}
  */
-const promiseAll = promises => {
-  const resolveValues = [];
+const promiseAll = promises =>
+  new Promise((resolve, reject) => {
+    const result = [];
+    let count = promises.length;
 
-  return promises
-    .reduce(
-      (acc, curr) =>
-        acc.then(() => curr).then(resolve => resolveValues.push(resolve)),
-      Promise.resolve()
-    )
-    .then(() => resolveValues);
-};
+    const isFinished = () => {
+      if (!count) {
+        resolve(result);
+      }
+    };
+
+    promises.forEach((promise, index) => {
+      promise
+        .then(res => {
+          result[index] = res;
+          count -= 1;
+        }, reject)
+        .then(isFinished);
+    });
+  });
 
 module.exports = promiseAll;
