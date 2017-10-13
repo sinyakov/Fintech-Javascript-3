@@ -1,1 +1,43 @@
-a { color: #fff; }
+html {
+  font-size: 16px;
+  font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 400px;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+ul {
+  margin: 0.5rem 0;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li::before {
+  position: absolute;
+  left: -1rem;
+  content: '–';
+}
+
+img {
+  float: right;
+}
