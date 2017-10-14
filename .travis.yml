@@ -1,3 +1,13 @@
 language: node_js
+
 node_js:
   - "6"
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: lesson-04
+
+secure: "rz44xzoHmQtLmTLjRy75YU0DXOV4xxuBcS0ZYGX7mUSR+iUa24mDG1AW702RJ//x4Kq0z/NGd0A7VLJorD4F1pNcSqFGlA9L+jeMcLw6/egQbmd1veKwoCLhZWQH4TwX9qCWSuzYWD7O4n/TCkdE5couWlXbLcE9dofOzZ+3bv19ziu07uSGO6CwJu9jdVsBIyBf/JtpeqyXqv/hzYEHEo3IEcqtdAmdDxmTIKHaQF8Xf7z3NtYT3YRDLcwADRcoEginVmOmxgdplYzcLzBowDeSRRqcF29rrruoG8XzEy17X3XXOSMJdFV37mApjjFNpcghl/jlrMNFaMbU+9Hzs6iTy5+pyST1ws/ndR4qDHFjhW/fyjMVkkvFlFyAqFEUK+0Dq080oBHyGw077pMxu3TWfXYMD17HvxoOTSR3dtHqEq/JPDwBed5X6dpuimxb6qH+Q3/aQdEBRUcNCyTxlV+46DsvEF1h2nxkMynCRbsdYoaKEISjwhviROWJrUrgTzcjjF90lo+6pRV4y/YMYwxy6JqRVDxQuxS/ThSPIWIPXeerXQkN6aUn8yiR5mj/roPbizQMudyPhiG7O0Hl/Z0YzcuqSIpo8dyKoZUP73nsfv4akDPEBPXF5ryGHBNmgUQwMNVOmMWZSybsbsF9E56ffAG7d6xSlN1oftPyyZs="
