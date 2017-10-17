@@ -27,13 +27,13 @@ body {
 }
 
 .first th {
-  padding: 0.5rem;
+  padding: 8px;
   width: 20%;
   vertical-align: top;
 }
 
 .first td {
-  padding: 0.5rem;
+  padding: 8px;
   width: 20%;
   vertical-align: top;
 }
@@ -46,11 +46,11 @@ body {
 
 .second {
   margin: 20px auto;
-  border-spacing: 0.5rem;
+  border-spacing: 8px;
 }
 
 .second td {
-  padding: 0.5rem;
+  padding: 8px;
 }
 
 .second td:nth-child(1) {
