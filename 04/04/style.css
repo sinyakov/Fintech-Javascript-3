@@ -3,9 +3,9 @@ html {
 }
 
 body {
-  margin: 2rem auto;
-  padding: 0 1rem;
-  max-width: 60rem;
+  margin: 32px auto;
+  padding: 0 16px;
+  max-width: 960px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 + p {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 a {
