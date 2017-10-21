@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="49" viewBox="0 0 48 49">
+    <defs>
+        <ellipse id="a" cx="24" cy="24.393" rx="24" ry="24.393"/>
+        <mask id="b" width="48" height="48.787" x="0" y="0" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use stroke="#74A3C7" stroke-width="2.4" mask="url(#b)" xlink:href="#a"/>
+        <path fill="#74A3C7" d="M27.282 24.154v-.066c1.116-.475 1.746-1.556 1.746-2.788 0-2.767-2.566-3.005-4.649-3.005H19.5v12.97h5.322c2.524 0 5.048-.973 5.048-3.977 0-1.707-.989-2.789-2.588-3.134zm-4.354-3.48h.947c.925 0 1.935.086 1.935 1.296 0 1.34-.988 1.449-2.019 1.449h-.863v-2.746zm1.094 8.214h-1.094v-3.243h1.474c1.114 0 2.208.13 2.208 1.578 0 1.556-1.41 1.665-2.588 1.665z"/>
+    </g>
+</svg>

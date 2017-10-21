@@ -1,11 +1,192 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Задание 5.1</title>
+    <meta charset="utf-8">
+    <title>Банк Тинькофф</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<h1>Сверстать блок меню как на картинке. Pixel-perfect.</h1>
-<img src="./task.png" alt="">
+
+<div class="wrapper">
+    <header class="main-header">
+        <h1 class="visuallyhidden">Тинькофф</h1>
+        <img src="img/logo.svg" class="main-header__logo" alt="Тинькофф">
+        <a class="main-header__tel" href="tel:88005551122">8 800 555-11-22</a>
+    </header>
+</div>
+
+<div class="menu-wrapper">
+    <div class="wrapper">
+        <nav class="menu">
+            <a class="menu__link menu__link--active">Карты</a>
+            <a class="menu__link " href="#">Вклады</a>
+            <a class="menu__link " href="#">Платежи и переводы</a>
+            <a class="menu__link " href="#">Бонусы</a>
+            <a class="menu__link " href="#">Страхование</a>
+            <a class="menu__link " href="#">О банке</a>
+        </nav>
+    </div>
+</div>
+
+<div class="banner-wrapper">
+    <div class="wrapper">
+        <div class="banner">
+            <div class="banner__description">
+                <h2 class="banner__header">Карты для&nbsp;вас
+                    <br>прямо сейчас</h2>
+                <div class="banner__text">Выбирайте карту, пользуйтесь
+                    <br>удобными сервисами</div>
+                <button class="banner__button" type="button">Оформить заявку</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+
+    <h2 class="main__header">Любые категории платежей</h2>
+
+    <div class="field">
+        <div class="tag">
+            <div class="tag__text">Кафе</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <div class="tag">
+            <div class="tag__text">Интернет</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <div class="tag">
+            <div class="tag__text">Телефон</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <div class="tag">
+            <div class="tag__text">Авто</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <div class="tag">
+            <div class="tag__text">ЖКХ</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <div class="tag">
+            <div class="tag__text">Одежда и обувь</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <div class="tag">
+            <div class="tag__text">Супермаркеты, гастраномы, универмаги</div>
+            <button class="tag__remove" type="button">Remove</button>
+        </div>
+        <input class="field__input">
+    </div>
+
+    <h2 class="main__header">Заполните несколько
+        <br>простых полей</h2>
+
+    <div class="form">
+        <div class="worksheet">
+            <input class="form__item form__item--name" type="text" placeholder="ФИО">
+            <input class="form__item form__item--locality" type="text" placeholder="Город проживания">
+            <input class="form__item" type="tel" placeholder="Мобильный телефон">
+            <input class="form__item form__item--email" type="email" placeholder="Электронная почта">
+        </div>
+
+        <h3 class="selector-header">Выберите это или другое</h3>
+
+        <div class="selector">
+            <div class="selector__item">
+                <label class="selector__label" for="this">Это</label>
+                <input type="radio" id="this" class="selector__radio" name="selector" checked>
+                <div class="selector__checked"></div>
+            </div>
+            <div class="selector__item">
+                <label class="selector__label" for="other">Другое</label>
+                <input type="radio" id="other" class="selector__radio" name="selector">
+                <div class="selector__checked"></div>
+            </div>
+        </div>
+
+        <button class="form__button" type="button">Отправить</button>
+    </div>
+
+</div>
+
+<div class="footer-wrapper">
+    <div class="wrapper">
+        <footer class="main-footer">
+            <div class="footer-menu">
+                <div class="footer-menu__group">
+                    <h3 class="footer-menu__header">О банке</h3>
+                    <nav class="footer-menu__list">
+                        <a href="#" class="footer-menu__link">Тинькофф Банк</a>
+                        <a href="#" class="footer-menu__link">Новости</a>
+                        <a href="#" class="footer-menu__link">Вакансии</a>
+                        <a href="#" class="footer-menu__link">For Investors</a>
+                    </nav>
+                </div>
+
+                <div class="footer-menu__group">
+                    <h3 class="footer-menu__header">Страхование</h3>
+                    <nav class="footer-menu__list">
+                        <a href="#" class="footer-menu__link">Автомобиль</a>
+                        <a href="#" class="footer-menu__link">Жизнь и здоровье</a>
+                        <a href="#" class="footer-menu__link">Путешествия</a>
+                        <a href="#" class="footer-menu__link">Имущество</a>
+                    </nav>
+                </div>
+
+                <div class="footer-menu__group">
+                    <h3 class="footer-menu__header">Карты</h3>
+                    <nav class="footer-menu__list">
+                        <a href="#" class="footer-menu__link">Кредитные карты</a>
+                        <a href="#" class="footer-menu__link">Дебетовые карты</a>
+                    </nav>
+                </div>
+
+                <div class="footer-menu__group">
+                    <h3 class="footer-menu__header">Вклады</h3>
+                    <nav class="footer-menu__list">
+                        <a href="#" class="footer-menu__link">Ставки по вкладам</a>
+                        <a href="#" class="footer-menu__link">Тарифы</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="info">
+
+                <div class="tel">
+                    <div class="tel__info">
+                        <div class="tel__number">8 800 500-11-22</div>
+                        <div class="tel__text">Для звонков по России</div>
+                    </div>
+                    <button class="tel__button" type="button">Онлайн-звонок в банк</button>
+                </div>
+
+                <div class="social">
+                    <a href="#" class="social__link social__link--vk">Поделиться в контакте</a>
+                    <a href="#" class="social__link social__link--fb">Поделиться в фейсбуке</a>
+                    <a href="#" class="social__link social__link--twi">Поделиться в твитере</a>
+                    <a href="#" class="social__link social__link--ok">Поделиться в одноклассниках</a>
+                    <a href="#" class="social__link social__link--gp">Поделиться в гуглплюсе</a>
+                    <a href="#" class="social__link social__link--yt">Поделиться на ютубе</a>
+                </div>
+
+                <div class="links">
+                    <a href="#" class="links__item">Курсы валют</a>
+                    <a href="#" class="links__item">Мобильные приложения</a>
+                    <a href="#" class="links__item">Карта сайта</a>
+                    <br>
+                    <a href="#" class="links__item">Информация о лицах, под контролем которых находится банк</a>
+                </div>
+            </div>
+            <div class="copyright">© 2006–2015, АО «Тинькофф Банк», официальный сайт, лицензия ЦБ РФ № 2673</div>
+            <button class="language" type="button">English</button>
+        </footer>
+    </div>
+</div>
+
+<div class="mobile">Будет мобильная версия</div>
+
+<script src="js/tags.js"></script>
 </body>
+
 </html>
