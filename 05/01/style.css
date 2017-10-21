@@ -175,18 +175,19 @@ body {
   margin-bottom: 27px;
 }
 
-.form__item-wrapper {
+.form__item {
   position: relative;
   margin: 12px 0;
 }
 
-.form__item {
+.form__item-input {
   box-sizing: border-box;
   padding: 23px 20px;
   width: 100%;
   border: none;
   border-radius: 6px;
   background-color: #eef2f7;
+  color: #333333;
   font-size: 17px;
   /*stylelint-disable */
   font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
@@ -195,13 +196,35 @@ body {
   line-height: 1.18;
 }
 
-.form__item:focus {
+.form__item-label {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  color: #74a3c7;
+  font-size: 17px;
+  line-height: 1.18;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+  transform: translate(0, 0);
+}
+
+.form__item-input[data-empty='false'],
+.form__item-input:valid {
+  padding: 32px 20px 14px;
+}
+
+.form__item-input:focus {
+  padding: 32px 20px 14px;
   background-color: #fff;
 }
 
-.form__item::placeholder {
+.form__item-input[data-empty='false'] + .form__item-label,
+.form__item-input:valid + .form__item-label,
+.form__item-input:focus + .form__item-label {
   color: #74a3c7;
-  opacity: 0.6;
+  font-size: 13px;
+  line-height: 1.15;
+  transform: translate(0, -8px);
 }
 
 .form__error {
@@ -264,16 +287,16 @@ body {
   display: block;
 }
 
-.form__item-wrapper--error .form__item {
+.form__item--error .form__item {
   outline: none;
   box-shadow: 0 0 0 1px #d0011b;
 }
 
-.form__item-wrapper--error .form__error {
+.form__item--error .form__error {
   display: block;
 }
 
-.form__item-wrapper--error .form__warner {
+.form__item--error .form__warner {
   display: block;
 }
 

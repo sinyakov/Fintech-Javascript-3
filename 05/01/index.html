@@ -83,19 +83,23 @@
 
     <form class="form">
         <div class="form__worksheet">
-            <div class="form__item-wrapper">
-                <input class="form__item form__item--name" type="text" placeholder="ФИО">
+            <div class="form__item">
+                <input id="form-name" class="form__item-input form__item-input--name" type="text" autocomplete="off" required>
+                <label class="form__item-label" for="form-name">ФИО</label>
             </div>
-            <div class="form__item-wrapper">
-                <input class="form__item form__item--locality" type="text" placeholder="Город проживания">
+            <div class="form__item">
+                <input id="form-locality" class="form__item-input form__item-input--locality" type="text" autocomplete="off" required>
+                <label class="form__item-label" for="form-locality">Город проживания</label>
                 <div class="form__warner"></div>
                 <div class="form__error">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</div>
             </div>
-            <div class="form__item-wrapper">
-                <input class="form__item" type="tel" placeholder="Мобильный телефон">
+            <div class="form__item">
+                <input id="form-tel" class="form__item-input" type="tel" autocomplete="off" required>
+                <label class="form__item-label" for="form-tel">Мобильный телефон</label>
             </div>
-            <div class="form__item-wrapper">
-                <input class="form__item form__item--email" type="email" placeholder="Электронная почта">
+            <div class="form__item">
+                <input id="form-email" class="form__item-input form__item-input--email" type="text" autocomplete="off" required>
+                <label class="form__item-label" for="form-email">Электронная почта</label>
                 <div class="form__helper">
                     <p class="form__helper-text">
                         Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
