@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -11,8 +11,7 @@
 
 <div class="wrapper">
     <header class="main-header">
-        <h1 class="visuallyhidden">Тинькофф</h1>
-        <img src="img/logo.svg" class="main-header__logo" alt="Тинькофф">
+        <img src="img/logo.svg" class="main-header__logo" width="197" height="65" alt="Тинькофф">
         <a class="main-header__tel" href="tel:88005551122">8 800 555-11-22</a>
     </header>
 </div>
@@ -21,24 +20,24 @@
     <div class="wrapper">
         <nav class="menu">
             <a class="menu__link menu__link--active">Карты</a>
-            <a class="menu__link " href="#">Вклады</a>
-            <a class="menu__link " href="#">Платежи и переводы</a>
-            <a class="menu__link " href="#">Бонусы</a>
-            <a class="menu__link " href="#">Страхование</a>
-            <a class="menu__link " href="#">О банке</a>
+            <a class="menu__link" href="#">Вклады</a>
+            <a class="menu__link" href="#">Платежи&nbsp;и&nbsp;переводы</a>
+            <a class="menu__link" href="#">Бонусы</a>
+            <a class="menu__link" href="#">Страхование</a>
+            <a class="menu__link" href="#">О&nbsp;банке</a>
         </nav>
     </div>
 </div>
 
-<div class="banner-wrapper">
+<div class="order-card-wrapper">
     <div class="wrapper">
-        <div class="banner">
-            <div class="banner__description">
-                <h2 class="banner__header">Карты для&nbsp;вас
+        <div class="order-card">
+            <div class="order-card__description">
+                <h2 class="order-card__header">Карты для&nbsp;вас
                     <br>прямо сейчас</h2>
-                <div class="banner__text">Выбирайте карту, пользуйтесь
+                <div class="order-card__text">Выбирайте карту, пользуйтесь
                     <br>удобными сервисами</div>
-                <button class="banner__button" type="button">Оформить заявку</button>
+                <button class="primary-button primary-button--order-card" type="button">Оформить заявку</button>
             </div>
         </div>
     </div>
@@ -46,68 +45,86 @@
 
 <div class="wrapper">
 
-    <h2 class="main__header">Любые категории платежей</h2>
+    <h2 class="subheader">Любые категории платежей</h2>
 
     <div class="field">
         <div class="tag">
-            <div class="tag__text">Кафе</div>
-            <button class="tag__remove" type="button">Remove</button>
+            Кафе
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <div class="tag">
-            <div class="tag__text">Интернет</div>
-            <button class="tag__remove" type="button">Remove</button>
+            Интернет
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <div class="tag">
-            <div class="tag__text">Телефон</div>
-            <button class="tag__remove" type="button">Remove</button>
+            Телефон
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <div class="tag">
-            <div class="tag__text">Авто</div>
-            <button class="tag__remove" type="button">Remove</button>
+            Авто
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <div class="tag">
-            <div class="tag__text">ЖКХ</div>
-            <button class="tag__remove" type="button">Remove</button>
+            ЖКХ
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <div class="tag">
-            <div class="tag__text">Одежда и обувь</div>
-            <button class="tag__remove" type="button">Remove</button>
+            Одежда и обувь
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <div class="tag">
-            <div class="tag__text">Супермаркеты, гастраномы, универмаги</div>
-            <button class="tag__remove" type="button">Remove</button>
+            Супермаркеты, гастраномы, универмаги
+            <button class="tag__remove" title="Удалить" type="button">Удалить</button>
         </div>
         <input class="field__input">
     </div>
 
-    <h2 class="main__header">Заполните несколько
-        <br>простых полей</h2>
+    <h2 class="subheader">Заполните&nbsp;несколько простых&nbsp;полей</h2>
 
-    <div class="form">
-        <div class="worksheet">
-            <input class="form__item form__item--name" type="text" placeholder="ФИО">
-            <input class="form__item form__item--locality" type="text" placeholder="Город проживания">
-            <input class="form__item" type="tel" placeholder="Мобильный телефон">
-            <input class="form__item form__item--email" type="email" placeholder="Электронная почта">
+    <form class="form">
+        <div class="form__worksheet">
+            <div class="form__item-wrapper">
+                <input class="form__item form__item--name" type="text" placeholder="ФИО">
+            </div>
+            <div class="form__item-wrapper">
+                <input class="form__item form__item--locality" type="text" placeholder="Город проживания">
+                <div class="form__warner"></div>
+                <div class="form__error">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</div>
+            </div>
+            <div class="form__item-wrapper">
+                <input class="form__item" type="tel" placeholder="Мобильный телефон">
+            </div>
+            <div class="form__item-wrapper">
+                <input class="form__item form__item--email" type="email" placeholder="Электронная почта">
+                <div class="form__helper">
+                    <p class="form__helper-text">
+                        Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <h3 class="selector-header">Выберите это или другое</h3>
+        <fieldset class="form__fieldset">
+            <legend class="selector-header">Выберите это или другое</legend>
 
-        <div class="selector">
-            <div class="selector__item">
-                <label class="selector__label" for="this">Это</label>
-                <input type="radio" id="this" class="selector__radio" name="selector" checked>
-                <div class="selector__checked"></div>
+            <div class="selector">
+                <div class="selector__item">
+                    <label class="selector__label" for="this">Это
+                        <input type="radio" id="this" class="selector__radio" name="selector" checked>
+                        <span class="selector__checked"></span>
+                    </label>
+                </div>
+                <div class="selector__item">
+                    <label class="selector__label" for="other">Другое
+                        <input type="radio" id="other" class="selector__radio" name="selector">
+                        <span class="selector__checked"></span>
+                    </label>
+                </div>
             </div>
-            <div class="selector__item">
-                <label class="selector__label" for="other">Другое</label>
-                <input type="radio" id="other" class="selector__radio" name="selector">
-                <div class="selector__checked"></div>
-            </div>
-        </div>
+        </fieldset>
 
-        <button class="form__button" type="button">Отправить</button>
-    </div>
+        <button class="primary-button primary-button--form" type="submit">Отправить</button>
+    </form>
 
 </div>
 
@@ -155,19 +172,19 @@
 
                 <div class="tel">
                     <div class="tel__info">
-                        <div class="tel__number">8 800 500-11-22</div>
+                        <a class="tel__number" href="tel:88005551122">8 800 500-11-22</a>
                         <div class="tel__text">Для звонков по России</div>
                     </div>
                     <button class="tel__button" type="button">Онлайн-звонок в банк</button>
                 </div>
 
                 <div class="social">
-                    <a href="#" class="social__link social__link--vk">Поделиться в контакте</a>
-                    <a href="#" class="social__link social__link--fb">Поделиться в фейсбуке</a>
-                    <a href="#" class="social__link social__link--twi">Поделиться в твитере</a>
-                    <a href="#" class="social__link social__link--ok">Поделиться в одноклассниках</a>
-                    <a href="#" class="social__link social__link--gp">Поделиться в гуглплюсе</a>
-                    <a href="#" class="social__link social__link--yt">Поделиться на ютубе</a>
+                    <a href="#" class="social__link social__link--vk" title="Мы в контакте">Мы в контакте</a>
+                    <a href="#" class="social__link social__link--fb" title="Мы в фейсбуке">Мы в фейсбуке</a>
+                    <a href="#" class="social__link social__link--twi" title="Мы в твитере">Мы в твитере</a>
+                    <a href="#" class="social__link social__link--ok" title="Мы в одноклассниках">Мы в одноклассниках</a>
+                    <a href="#" class="social__link social__link--gp" title="Мы в гуглплюсе">Мы в гуглплюсе</a>
+                    <a href="#" class="social__link social__link--yt" title="Мы на ютубе">Мы на ютубе</a>
                 </div>
 
                 <div class="links">
@@ -178,7 +195,7 @@
                     <a href="#" class="links__item">Информация о лицах, под контролем которых находится банк</a>
                 </div>
             </div>
-            <div class="copyright">© 2006–2015, АО «Тинькофф Банк», официальный сайт, лицензия ЦБ РФ № 2673</div>
+            <p class="copyright">© 2006–2015, АО «Тинькофф Банк», официальный сайт, лицензия ЦБ РФ № 2673</p>
             <button class="language" type="button">English</button>
         </footer>
     </div>
@@ -186,6 +203,7 @@
 
 <div class="mobile">Будет мобильная версия</div>
 
+<script src="js/locality.js"></script>
 <script src="js/tags.js"></script>
 </body>
 

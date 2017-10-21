@@ -1,23 +1,15 @@
 body {
   font-size: 16px;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  /*stylelint-disable */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
 }
 
 .wrapper {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 828px;
-}
-
-.visuallyhidden {
-  position: absolute !important;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  width: 1px !important;
-  height: 1px !important;
-  border: 0 !important;
 }
 
 .main-header {
@@ -56,22 +48,19 @@ body {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: normal;
-  word-wrap: break-word;
   font-size: 13px;
-  line-height: 1;
-  line-height: 18px;
+  line-height: 1.39;
 }
 
 .menu__link--active {
   border-bottom: 3px solid #ffdd2d;
 }
 
-.banner-wrapper {
+.order-card-wrapper {
   background-image: linear-gradient(to right, #1489e7, #003e82);
 }
 
-.banner {
+.order-card {
   margin: 0 0 90px;
   background-image: url(img/cards-mobile.png);
   background-position: 0;
@@ -79,49 +68,54 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) {
-  .banner {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .order-card {
     background-image: url(img/cards-mobile@2x.png);
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3) {
-  .banner {
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .order-card {
     background-image: url(img/cards-mobile@3x.png);
   }
 }
 
-.banner__description {
+.order-card__description {
   margin-left: 430px;
   padding: 92px 0 74px;
+  color: #fff;
 }
 
-.banner__header {
+.order-card__header {
   margin: 0 0 17px;
-  color: #fff;
   font-weight: 100;
   font-size: 50px;
   line-height: 1;
 }
 
-.banner__text {
+.order-card__text {
   margin: 0 0 19px;
-  color: #fff;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
 }
 
-.banner__button {
-  padding: 19px 35px;
+.primary-button {
   border: none;
   border-radius: 6px;
   background-color: #ffdd2d;
   color: #333;
   text-align: center;
   font-size: 17px;
-  font-family: Roboto;
+  /*stylelint-disable */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
   line-height: 1.42;
+}
+
+.primary-button--order-card {
+  padding: 19px 35px;
 }
 
 .field {
@@ -143,7 +137,7 @@ body {
   outline: none;
   border: none;
   font-size: 22px;
-  line-height: 22px;
+  line-height: 1;
 }
 
 .tag {
@@ -156,24 +150,17 @@ body {
   background-color: #eef2f7;
   color: #333;
   font-size: 13px;
-  line-height: 18px;
-}
-
-.tag__text {
-  margin-right: 8px;
+  line-height: 1.39;
 }
 
 .tag__remove {
+  margin-left: 8px;
   width: 11px;
   height: 11px;
   border: none;
   background: url(img/delete.svg);
   font-size: 0;
-}
-
-.worksheet {
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
 }
 
 .form {
@@ -182,17 +169,34 @@ body {
   text-align: center;
 }
 
+.form__worksheet {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27px;
+}
+
+.form__item-wrapper {
+  position: relative;
+  margin: 12px 0;
+}
+
 .form__item {
   box-sizing: border-box;
-  margin: 12px 0;
   padding: 23px 20px;
   width: 100%;
   border: none;
   border-radius: 6px;
   background-color: #eef2f7;
   font-size: 17px;
-  font-family: Roboto;
-  line-height: 20px;
+  /*stylelint-disable */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
+  line-height: 1.18;
+}
+
+.form__item:focus {
+  background-color: #fff;
 }
 
 .form__item::placeholder {
@@ -200,16 +204,88 @@ body {
   opacity: 0.6;
 }
 
-.form__button {
+.form__error {
+  display: none;
+  margin: 11px 0 4px;
+  color: #d0021b;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.16;
+}
+
+.form__warner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  padding: 21px 18px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: inherit;
+  background-image: url(img/warner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__helper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 21px 18px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: inherit;
+  background-image: url(img/helper.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.form__helper-text {
+  position: absolute;
+  top: 20px;
+  right: 56px;
+  display: none;
+  padding: 16px;
+  width: 284px;
+  border: solid 1px #dddfe0;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #9299a2;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.38;
+  transform: translate(0, -50%);
+}
+
+.form__helper:hover .form__helper-text {
+  display: block;
+}
+
+.form__item-wrapper--error .form__item {
+  outline: none;
+  box-shadow: 0 0 0 1px #d0011b;
+}
+
+.form__item-wrapper--error .form__error {
+  display: block;
+}
+
+.form__item-wrapper--error .form__warner {
+  display: block;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.primary-button--form {
   margin: 38px 0 42px;
   padding: 23px 86px;
-  border: none;
-  border-radius: 6px;
-  background-color: #ffdd2d;
-  color: #333;
-  font-size: 17px;
-  font-family: Roboto;
-  line-height: 20px;
 }
 
 .selector-header {
@@ -218,29 +294,34 @@ body {
   text-align: center;
   font-weight: 300;
   font-size: 21px;
-  line-height: 24px;
+  line-height: 1.15;
 }
 
 .selector {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 -12px;
 }
 
 .selector__item {
   position: relative;
+  box-sizing: border-box;
   margin: 12px;
-  width: 50%;
+  width: calc(50% - 24px);
   border: solid 1px #dddfe0;
   border-radius: 6px;
   color: #333;
   text-align: left;
   font-size: 17px;
-  font-family: Roboto;
-  line-height: 20px;
+  /*stylelint-disable */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
+  line-height: 1.18;
 }
 
 .selector__label {
+  position: relative;
   display: block;
   padding: 21px 18px;
 }
@@ -264,11 +345,12 @@ body {
 }
 
 .selector__radio:checked ~ .selector__checked {
-  background-color: #ffdd2f;
-  background-image: url(img/radio.svg);
+  box-sizing: border-box;
+  border: 11px solid #ffdd2f;
+  background-color: #3e4757;
 }
 
-.main__header {
+.subheader {
   color: #333;
   text-align: center;
   font-weight: 300;
@@ -306,7 +388,7 @@ body {
   letter-spacing: 1.1px;
   font-weight: 400;
   font-size: 13px;
-  line-height: 15px;
+  line-height: 1.15;
 }
 
 .footer-menu__list {
@@ -339,6 +421,7 @@ body {
 
 .tel__number {
   color: #333;
+  text-decoration: none;
   font-size: 21px;
   line-height: 1.43;
 }
@@ -361,7 +444,10 @@ body {
   background-repeat: no-repeat;
   color: #74a3c7;
   font-size: 17px;
-  font-family: Roboto;
+  /*stylelint-disable */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
   line-height: 0.94;
 }
 
@@ -433,7 +519,7 @@ body {
 }
 
 .copyright {
-  margin-top: 13px;
+  margin: 13px 0 0;
   width: 504px;
   color: #9299a2;
   font-size: 13px;
@@ -445,12 +531,27 @@ body {
   padding: 4px 33px 4px 0;
   border: none;
   background: inherit;
-  background-image: url(img/lang.svg);
+  background-image: url(img/lang.png);
   background-position: right 0;
   background-size: 24px;
   background-repeat: no-repeat;
   color: #9299a2;
   font-size: 13px;
-  font-family: Roboto;
+  /*stylelint-disable */
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
   line-height: 1.24;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .language {
+    background-image: url(img/lang@2x.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .language {
+    background-image: url(img/lang@3x.png);
+  }
 }
