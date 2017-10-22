@@ -10,6 +10,6 @@ before_install:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/05/01 root@188.226.171.191:var/www/tinkoff
+  script: rsync -avz $TRAVIS_BUILD_DIR/05/01/* root@188.226.171.191:/var/www/tinkoff/
   on:
     branch: lesson-05
