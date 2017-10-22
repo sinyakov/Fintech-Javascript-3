@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 </head>
 
 <div class="wrapper">
     <header class="main-header">
         <img src="img/logo.svg" class="main-header__logo" width="197" height="65" alt="Тинькофф">
+        <img src="img/logo-mobile.svg" class="main-header__logo-mobile" width="50" height="44" alt="Тинькофф">
         <a class="main-header__tel" href="tel:88005551122">8 800 555-11-22</a>
+        <button class="main-header__hamburger" type="button" title="Открыть меню">Открыть меню</button>
     </header>
 </div>
 
@@ -79,7 +82,7 @@
         <input class="field__input">
     </div>
 
-    <h2 class="subheader">Заполните&nbsp;несколько простых&nbsp;полей</h2>
+    <h2 class="subheader subheader--form">Заполните&nbsp;несколько простых&nbsp;полей</h2>
 
     <form class="form">
         <div class="form__worksheet">
@@ -191,6 +194,13 @@
                     <a href="#" class="social__link social__link--yt" title="Мы на ютубе">Мы на ютубе</a>
                 </div>
 
+                <div class="footer-mobile-menu">
+                    <a class="footer-mobile-menu__link" href="#">О банке</a>
+                    <a class="footer-mobile-menu__link" href="#">Страхование</a>
+                    <a class="footer-mobile-menu__link" href="#">Карты</a>
+                    <a class="footer-mobile-menu__link" href="#">Вклады</a>
+                </div>
+
                 <div class="links">
                     <a href="#" class="links__item">Курсы валют</a>
                     <a href="#" class="links__item">Мобильные приложения</a>
@@ -199,13 +209,11 @@
                     <a href="#" class="links__item">Информация о лицах, под контролем которых находится банк</a>
                 </div>
             </div>
-            <p class="copyright">© 2006–2015, АО «Тинькофф Банк», официальный сайт, лицензия ЦБ РФ № 2673</p>
-            <button class="language" type="button">English</button>
+            <p class="copyright">© 2006–2015, АО&nbsp;«Тинькофф&nbsp;Банк», официальный сайт, лицензия ЦБ РФ № 2673</p>
+            <button class="language" type="button" title="English">English</button>
         </footer>
     </div>
 </div>
-
-<div class="mobile">Будет мобильная версия</div>
 
 <script src="js/locality.js"></script>
 <script src="js/tags.js"></script>
