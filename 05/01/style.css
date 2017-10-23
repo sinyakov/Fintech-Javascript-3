@@ -170,6 +170,7 @@ body {
 @media (max-width: 866px) {
   .order-card::before {
     background-position: -48% 62%;
+    transform: none;
   }
 }
 
@@ -187,7 +188,6 @@ body {
   .order-card::before {
     background-position: 50% 300%;
     background-size: 375px 358px;
-    transform: none;
   }
 
   .order-card__description {
