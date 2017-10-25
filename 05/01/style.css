@@ -387,9 +387,9 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 21px 18px;
+  padding: 0px 24px;
   width: 24px;
-  height: 24px;
+  height: 100%;
   border-radius: 6px;
   background-color: inherit;
   background-image: url(img/helper.svg);
