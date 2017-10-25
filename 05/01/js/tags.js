@@ -8,6 +8,7 @@ const generateNewTag = tagValue => {
   const newTag = document.createElement('div');
 
   newTag.classList.add('tag');
+  newTag.title = tagValue;
 
   const newTagText = document.createElement('span');
 

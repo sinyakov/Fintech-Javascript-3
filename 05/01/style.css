@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   font-size: 16px;
   /*stylelint-disable */
   font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
@@ -6,10 +7,16 @@ body {
   /*stylelint-enable */
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .wrapper {
   margin: 0 auto;
   padding: 0 18px;
-  max-width: 828px;
+  max-width: 864px;
 }
 
 .main-header {
@@ -43,6 +50,7 @@ body {
 .main-header__tel {
   color: #333;
   text-decoration: none;
+  white-space: nowrap;
   font-size: 21px;
   line-height: 1;
 }
@@ -61,19 +69,23 @@ body {
   }
 }
 
-.menu-wrapper {
+.menu {
   background-color: #3e4758;
 }
 
-.menu {
+.menu__list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
   color: #fff;
+  list-style: none;
   letter-spacing: 0.9px;
   font-size: 13px;
 }
 
 .menu__link {
+  display: inline-block;
   padding: 26px 0 18px;
   color: inherit;
   text-decoration: none;
@@ -216,7 +228,6 @@ body {
 .field {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
   margin: 45px auto 77px;
   padding: 12px;
   width: 100%;
@@ -226,13 +237,12 @@ body {
 
 .field__input {
   flex-grow: 1;
-  box-sizing: border-box;
   margin: 6px;
-  padding: 10px 11px;
+  padding: 9px 11px;
   max-width: 100%;
   outline: none;
   border: none;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1;
 }
 
@@ -293,7 +303,9 @@ body {
 .form__worksheet {
   display: flex;
   flex-direction: column;
-  margin-bottom: 27px;
+  margin: 0 0 27px;
+  padding: 0;
+  border: none;
 }
 
 .form__item {
@@ -302,7 +314,6 @@ body {
 }
 
 .form__item-input {
-  box-sizing: border-box;
   padding: 23px 20px;
   width: 100%;
   border: none;
@@ -463,7 +474,6 @@ body {
 
 .selector__item {
   position: relative;
-  box-sizing: border-box;
   margin: 12px;
   width: calc(50% - 24px);
   border: solid 1px #dddfe0;
@@ -503,7 +513,6 @@ body {
 }
 
 .selector__radio:checked ~ .selector__checked {
-  box-sizing: border-box;
   border: 11px solid #ffdd2f;
   background-color: #3e4757;
 }
@@ -607,6 +616,7 @@ body {
 .tel__number {
   color: #333;
   text-decoration: none;
+  white-space: nowrap;
   font-size: 21px;
   line-height: 1.43;
 }
@@ -618,7 +628,6 @@ body {
 }
 
 .tel__button {
-  box-sizing: border-box;
   padding: 16px 0 16px 28px;
   width: 252px;
   border: solid 1px #74a3c7;
