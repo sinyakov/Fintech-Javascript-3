@@ -373,9 +373,9 @@ body {
   top: 0;
   right: 0;
   display: none;
-  padding: 21px 18px;
+  padding: 0 24px;
   width: 24px;
-  height: 24px;
+  height: 66px;
   border-radius: 6px;
   background-color: inherit;
   background-image: url(img/warner.svg);
@@ -387,9 +387,9 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0px 24px;
+  padding: 0 24px;
   width: 24px;
-  height: 100%;
+  height: 66px;
   border-radius: 6px;
   background-color: inherit;
   background-image: url(img/helper.svg);
@@ -419,8 +419,9 @@ body {
   display: block;
 }
 
-.form__item--error .form__item {
+.form__item--error .form__item-input {
   outline: none;
+  background-color: inherit;
   box-shadow: 0 0 0 1px #d0011b;
 }
 
