@@ -522,7 +522,7 @@ body {
   cursor: default;
 }
 
-.selector__radio:checked ~ .selector__label:after {
+.selector__radio:checked ~ .selector__label::after {
   border: 11px solid #ffdd2f;
   background-color: #3e4757;
 }
