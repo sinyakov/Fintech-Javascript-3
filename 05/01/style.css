@@ -493,9 +493,12 @@ body {
   position: relative;
   display: block;
   padding: 21px 18px;
+  color: #74a3c7;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-.selector__checked {
+.selector__label::after {
   position: absolute;
   top: 18px;
   right: 18px;
@@ -513,7 +516,13 @@ body {
   visibility: hidden;
 }
 
-.selector__radio:checked ~ .selector__checked {
+.selector__radio:checked ~ .selector__label {
+  color: #333;
+  opacity: 1;
+  cursor: default;
+}
+
+.selector__radio:checked ~ .selector__label:after {
   border: 11px solid #ffdd2f;
   background-color: #3e4757;
 }

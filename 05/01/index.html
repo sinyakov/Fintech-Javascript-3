@@ -126,7 +126,7 @@
                 <div class="form__error">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</div>
             </div>
             <div class="form__item">
-                <input id="form-tel" class="form__item-input" type="tel" autocomplete="off" required>
+                <input id="form-tel" class="form__item-input form__item-input--mobile" type="tel" autocomplete="off" required>
                 <label class="form__item-label" for="form-tel">Мобильный телефон</label>
             </div>
             <div class="form__item">
@@ -145,16 +145,12 @@
 
             <div class="selector">
                 <div class="selector__item">
-                    <label class="selector__label" for="this">Это
-                        <input type="radio" id="this" class="selector__radio" name="selector" checked>
-                        <span class="selector__checked"></span>
-                    </label>
+                    <input type="radio" id="this" class="selector__radio" name="selector" checked>
+                    <label class="selector__label" for="this">Это</label>
                 </div>
                 <div class="selector__item">
-                    <label class="selector__label" for="other">Другое
-                        <input type="radio" id="other" class="selector__radio" name="selector">
-                        <span class="selector__checked"></span>
-                    </label>
+                    <input type="radio" id="other" class="selector__radio" name="selector">
+                    <label class="selector__label" for="other">Другое</label>
                 </div>
             </div>
         </fieldset>
@@ -245,6 +241,7 @@
 </div>
 
 <script src="js/locality.js"></script>
+<!-- <script src="js/mobile.js"></script> -->
 <script src="js/tags.js"></script>
 </body>
 
