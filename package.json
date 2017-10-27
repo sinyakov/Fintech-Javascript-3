@@ -4,7 +4,7 @@
   "description": "Homeworks for frontend part of tinkoff fintech 3 school",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint-html && npm run lint-css && npm run test",
+    "test": "npm run lint-html && npm run lint-css && npm run lint",
     "lint": "eslint ./06/*/task.js",
     "lint-html": "node html-validator.js ./06/*.html",
     "lint-css": "stylelint ./06/*.less",
