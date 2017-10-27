@@ -4,10 +4,10 @@
   "description": "Homeworks for frontend part of tinkoff fintech 3 school",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint-html && npm run lint-css",
-    "lint": "eslint ./05/*/task.js",
-    "lint-html": "node html-validator.js ./05/**/*.html",
-    "lint-css": "stylelint ./05/**/*.css",
+    "test": "npm run lint-html && npm run lint-css && npm run test",
+    "lint": "eslint ./06/*/task.js",
+    "lint-html": "node html-validator.js ./06/*.html",
+    "lint-css": "stylelint ./06/*.less",
     "unit-tests": "mocha --reporter=spec ./05/*/test.js"
   },
   "author": "",
