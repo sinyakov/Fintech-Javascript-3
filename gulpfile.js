@@ -59,7 +59,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('deploy', () =>
-  gulp.src('./build/**').pipe(
+  gulp.src('$TRAVIS_BUILD_DIR/build/**').pipe(
     rsync({
       root: 'build/',
       username: 'root',
