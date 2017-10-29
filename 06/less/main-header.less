@@ -1,0 +1,49 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.main-header__logo {
+  width: 197px;
+  height: 65px;
+}
+
+.main-header__logo-mobile {
+  display: none;
+  width: 50px;
+  height: 44px;
+}
+
+.main-header__hamburger {
+  display: none;
+  width: 25px;
+  height: 20px;
+  border: none;
+  background-color: inherit;
+  background-image: url(img/hamburger.svg);
+  font-size: 0;
+}
+
+.main-header__tel {
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 21px;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .main-header__logo {
+    display: none;
+  }
+
+  .main-header__logo-mobile {
+    display: block;
+  }
+
+  .main-header__hamburger {
+    display: block;
+  }
+}

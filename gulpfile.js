@@ -69,7 +69,8 @@ gulp.task('deploy', () =>
       recursive: true,
       clean: true,
       incremental: true,
-      exclude: '.DS_Store'
+      command: true,
+      exclude: ['.DS_Store']
     })
   )
 );

@@ -1,0 +1,68 @@
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 45px auto 77px;
+  padding: 12px;
+  width: 100%;
+  border: solid 1px #dddfe0;
+  border-radius: 6px;
+}
+
+.field__input {
+  flex-grow: 1;
+  margin: 6px;
+  padding: 9px 11px;
+  max-width: 100%;
+  outline: none;
+  border: none;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.tag {
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px;
+  padding: 12px 0 12px 11px;
+  padding-right: 50px;
+  max-width: 216px;
+  border-radius: 6px;
+  background-color: #eef2f7;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.39;
+}
+
+.tag__text {
+  overflow: hidden;
+  width: ~'calc(100% + 50px)';
+  white-space: nowrap;
+}
+
+.tag__remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 22px 12px 22px 30px;
+  width: 11px;
+  height: 11px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  /*stylelint-disable */
+  background-image: url(img/delete.svg),
+    linear-gradient(to right, rgba(238, 242, 247, 0.5), #eef2f7 30%);
+  /*stylelint-enable */
+  background-position: 60% 50%;
+  background-repeat: no-repeat;
+  font-size: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .field {
+    margin: 24px auto 52px;
+  }
+}

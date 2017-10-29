@@ -1,0 +1,40 @@
+.menu {
+  background-color: #3e4758;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+  letter-spacing: 0.9px;
+  font-size: 13px;
+}
+
+.menu__link {
+  display: inline-block;
+  padding: 26px 0 18px;
+  border-bottom: 3px solid #3e4758;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.39;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.menu__link--active {
+  border-bottom: 3px solid @yellow-color;
+}
+
+.menu__link:hover {
+  border-bottom-color: @yellow-color;
+}
+
+@media (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+}

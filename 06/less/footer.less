@@ -1,0 +1,253 @@
+.footer-wrapper {
+  padding: 35px 0 52px;
+  border-top: 1px solid #dddfe0;
+}
+
+.main-footer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 288px;
+}
+
+.footer-menu__group {
+  margin-bottom: 36px;
+  width: 50%;
+}
+
+.footer-menu__header {
+  margin: 0 0 11px;
+  color: #9299a2;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu__link {
+  color: #74a3c7;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.77;
+}
+
+.footer-mobile-menu {
+  display: none;
+}
+
+.info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 432px;
+}
+
+.tel {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tel__info {
+  width: 180px;
+}
+
+.tel__number {
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 21px;
+  line-height: 1.43;
+}
+
+.tel__text {
+  color: #9299a2;
+  font-size: 13px;
+  line-height: 1.77;
+}
+
+.tel__button {
+  padding: 16px 0 16px 28px;
+  width: 252px;
+  border: solid 1px #74a3c7;
+  border-radius: 6px;
+  background-color: inherit;
+  background-image: url(img/tel.svg);
+  background-position: left 21px top 15px;
+  background-repeat: no-repeat;
+  color: #74a3c7;
+  font-size: 17px;
+  font-family: @default-font;
+  line-height: 0.94;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0 50px;
+  width: 100%;
+}
+
+.social__link {
+  width: 48px;
+  height: 49px;
+  background-size: 48px 49px;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.social__link--vk {
+  background-image: url(img/social/vk.svg);
+}
+
+.social__link--fb {
+  background-image: url(img/social/fb.svg);
+}
+
+.social__link--twi {
+  background-image: url(img/social/twi.svg);
+}
+
+.social__link--ok {
+  background-image: url(img/social/ok.svg);
+}
+
+.social__link--gp {
+  background-image: url(img/social/gp.svg);
+}
+
+.social__link--yt {
+  background-image: url(img/social/yt.svg);
+}
+
+.mobile {
+  display: none;
+}
+
+.links__item {
+  margin-right: 30px;
+  color: #74a3c7;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.77;
+}
+
+.copyright {
+  margin: 13px 0 0;
+  max-width: 504px;
+  color: #9299a2;
+  font-size: 13px;
+  line-height: 1.23;
+}
+
+.language {
+  margin-top: 9px;
+  padding: 4px 33px 4px 0;
+  border: none;
+  background: inherit;
+  background-image: url(img/lang.png);
+  background-position: right 0;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  color: #9299a2;
+  font-size: 13px;
+  font-family: @default-font;
+  line-height: 1.24;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .language {
+    background-image: url(img/lang@2x.png);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .language {
+    background-image: url(img/lang@3x.png);
+  }
+}
+
+@media (max-width: 756px) {
+  .footer-wrapper {
+    padding: 36px 18px 18px;
+    border: none;
+    background-color: #f6f7f8;
+  }
+
+  .main-footer {
+    margin: auto;
+    max-width: 252px;
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .tel__info {
+    display: none;
+  }
+
+  .social {
+    margin-bottom: 30px;
+  }
+
+  .social__link {
+    width: 29px;
+    height: 29px;
+    background-size: 29px;
+  }
+
+  .footer-mobile-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .footer-mobile-menu__link {
+    margin: 0 0 16px;
+    width: 50%;
+    color: #9299a2;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.15;
+  }
+
+  .links__item {
+    margin-right: 7px;
+    line-height: 1.85;
+  }
+
+  .links__item:last-child {
+    display: inline-block;
+    margin: 18px 0;
+    line-height: 1.38;
+  }
+
+  .copyright {
+    max-width: 198px;
+    line-height: 1.31;
+  }
+
+  .language {
+    align-self: flex-end;
+    margin-bottom: 2px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+  }
+}
