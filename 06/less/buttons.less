@@ -4,12 +4,28 @@
   background-color: @yellow-color;
   color: @dark-grey-color;
   text-align: center;
+  white-space: nowrap;
   font-size: 17px;
   font-family: @default-font;
   line-height: 1.42;
   cursor: pointer;
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: darken(@yellow-color, 10%);
+  }
+
+  &--order-card {
+    padding: 19px 35px;
+  }
+
+  &--form {
+    margin: 38px 0 42px;
+    padding: 21px 86px;
+
+    @media (max-width: @mobile-width) {
+      margin-bottom: 21px;
+      width: 100%;
+    }
   }
 }

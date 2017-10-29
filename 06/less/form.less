@@ -1,5 +1,5 @@
 .form {
-  margin: 65px auto 39px;
+  margin: 54px auto 15px;
   max-width: 540px;
   text-align: center;
 
@@ -11,14 +11,14 @@
 .form__worksheet {
   display: flex;
   flex-direction: column;
-  margin: 0 0 27px;
+  margin: 77px 0 17px;
   padding: 0;
   border: none;
 }
 
 .form__item {
   position: relative;
-  margin: 12px 0;
+  margin: 0 0 24px;
 }
 
 .form__item-input {
@@ -46,15 +46,15 @@
 }
 
 .form__item-input[data-empty='false'] {
-  padding: 32px 20px 14px;
+  padding: 35px 20px 11px;
 }
 
 .form__item-input:valid {
-  padding: 32px 20px 14px;
+  padding: 35px 20px 11px;
 }
 
 .form__item-input:focus {
-  padding: 32px 20px 14px;
+  padding: 35px 20px 11px;
   background-color: @white-color;
 }
 
@@ -93,7 +93,7 @@
   top: 0;
   right: 0;
   display: none;
-  padding: 0 24px;
+  padding: 0 31px;
   width: 24px;
   height: 66px;
   border-radius: 6px;
@@ -107,7 +107,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0 24px;
+  padding: 0 31px;
   width: 24px;
   height: 66px;
   border-radius: 6px;
@@ -148,8 +148,8 @@
 
 .form__item--error .form__item-input {
   outline: none;
+  border: 1px solid #d0011b;
   background-color: inherit;
-  box-shadow: 0 0 0 1px #d0011b;
 }
 
 .form__item--error .form__error {
@@ -164,14 +164,4 @@
   margin: 0;
   padding: 0;
   border: none;
-}
-
-.primary-button--form {
-  margin: 38px 0 42px;
-  padding: 23px 86px;
-
-  @media (max-width: @mobile-width) {
-    margin-bottom: 21px;
-    width: 100%;
-  }
 }
