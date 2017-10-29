@@ -29,7 +29,7 @@ gulp.task('style', () =>
     .pipe(server.stream())
 );
 
-gulp.task('compress', () =>
+gulp.task('scripts', () =>
   gulp
     .src('./06/js/*.js')
     .pipe(
@@ -43,7 +43,7 @@ gulp.task('compress', () =>
     .pipe(gulp.dest('./build/js'))
 );
 
-gulp.task('build', done => run('clean', 'copy', 'style', 'compress', done));
+gulp.task('build', done => run('clean', 'copy', 'style', 'scripts', done));
 
 gulp.task('serve', () => {
   server.init({
@@ -56,12 +56,13 @@ gulp.task('serve', () => {
 
   gulp.watch('./06/less/**.less', ['style']);
   gulp.watch('./06/assets/**', ['copy']);
+  gulp.watch('./06/js/*.js', ['scripts']);
 });
 
 gulp.task('deploy', () =>
   gulp.src('$TRAVIS_BUILD_DIR/build/**').pipe(
     rsync({
-      root: 'build/',
+      root: '$TRAVIS_BUILD_DIR/build/',
       username: 'root',
       hostname: '188.226.171.191',
       destination: '/var/www/tinkoff/',
