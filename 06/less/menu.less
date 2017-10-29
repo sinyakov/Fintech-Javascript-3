@@ -1,5 +1,9 @@
 .menu {
   background-color: #3e4758;
+
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -7,7 +11,7 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: @white-color;
   list-style: none;
   letter-spacing: 0.9px;
   font-size: 13px;
@@ -23,18 +27,12 @@
   font-size: 13px;
   line-height: 1.39;
   transition: border-bottom-color 0.3s ease-in-out;
-}
 
-.menu__link--active {
-  border-bottom: 3px solid @yellow-color;
-}
+  &--active {
+    border-bottom: 3px solid @yellow-color;
+  }
 
-.menu__link:hover {
-  border-bottom-color: @yellow-color;
-}
-
-@media (max-width: 640px) {
-  .menu {
-    display: none;
+  &:hover {
+    border-bottom-color: @yellow-color;
   }
 }

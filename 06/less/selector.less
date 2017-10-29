@@ -1,6 +1,6 @@
 .selector-header {
   margin: 30px 0 13px;
-  color: #333;
+  color: @dark-grey-color;
   text-align: center;
   font-weight: 300;
   font-size: 21px;
@@ -11,6 +11,10 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -12px;
+
+  @media (max-width: @mobile-width) {
+    margin: 0;
+  }
 }
 
 .selector__item {
@@ -19,11 +23,16 @@
   width: ~'calc(50% - 24px)';
   border: solid 1px #dddfe0;
   border-radius: 6px;
-  color: #333;
+  color: @dark-grey-color;
   text-align: left;
   font-size: 17px;
   font-family: @default-font;
   line-height: 1.18;
+
+  @media (max-width: @mobile-width) {
+    margin: 12px 0;
+    width: 100%;
+  }
 }
 
 .selector__label {
@@ -34,21 +43,21 @@
   opacity: 0.6;
   cursor: pointer;
   transition: color 0.4s ease-in-out;
-}
 
-.selector__label::after {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: -1;
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 0 solid #ffdd2f;
-  border-radius: 100%;
-  background-color: #eef2f7;
-  content: '';
-  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &::after {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: -1;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 0 solid #ffdd2f;
+    border-radius: 100%;
+    background-color: #eef2f7;
+    content: '';
+    transition: border 0.3s ease-in-out 0.1s, background-color 0.3s ease-in-out;
+  }
 }
 
 .selector__radio {
@@ -57,7 +66,7 @@
 }
 
 .selector__radio:checked ~ .selector__label {
-  color: #333;
+  color: @dark-grey-color;
   opacity: 1;
   cursor: default;
 }
@@ -68,33 +77,20 @@
   transition: border 0.3s ease-in-out, background-color 0.2s ease-in-out 0.25s;
 }
 
-@media (max-width: 640px) {
-  .selector {
-    margin: 0;
-  }
-
-  .selector__item {
-    margin: 12px 0;
-    width: 100%;
-  }
-}
-
 .subheader {
   margin: 0;
-  color: #333;
+  color: @dark-grey-color;
   text-align: center;
   font-weight: 300;
   font-size: 50px;
   line-height: 1.08;
-}
 
-@media (max-width: 640px) {
-  .subheader {
+  @media (max-width: @mobile-width) {
     font-size: 30px;
     line-height: 1.2;
-  }
 
-  .subheader--form {
-    font-size: 24px;
+    &--form {
+      font-size: 24px;
+    }
   }
 }

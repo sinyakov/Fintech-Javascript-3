@@ -1,4 +1,4 @@
-.field {
+.tags {
   display: flex;
   flex-wrap: wrap;
   margin: 45px auto 77px;
@@ -6,9 +6,13 @@
   width: 100%;
   border: solid 1px #dddfe0;
   border-radius: 6px;
+
+  @media (max-width: @mobile-width) {
+    margin: 24px auto 52px;
+  }
 }
 
-.field__input {
+.tags__input {
   flex-grow: 1;
   margin: 6px;
   padding: 9px 11px;
@@ -19,7 +23,7 @@
   line-height: 1;
 }
 
-.tag {
+.tags__item {
   position: relative;
   overflow: hidden;
   align-items: center;
@@ -30,18 +34,18 @@
   max-width: 216px;
   border-radius: 6px;
   background-color: #eef2f7;
-  color: #333;
+  color: @dark-grey-color;
   font-size: 13px;
   line-height: 1.39;
 }
 
-.tag__text {
+.tags__text {
   overflow: hidden;
   width: ~'calc(100% + 50px)';
   white-space: nowrap;
 }
 
-.tag__remove {
+.tags__remove {
   position: absolute;
   top: 0;
   right: 0;
@@ -59,10 +63,4 @@
   background-repeat: no-repeat;
   font-size: 0;
   cursor: pointer;
-}
-
-@media (max-width: 640px) {
-  .field {
-    margin: 24px auto 52px;
-  }
 }

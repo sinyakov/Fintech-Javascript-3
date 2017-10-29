@@ -2,9 +2,14 @@
   border: none;
   border-radius: 6px;
   background-color: @yellow-color;
-  color: #333;
+  color: @dark-grey-color;
   text-align: center;
   font-size: 17px;
   font-family: @default-font;
   line-height: 1.42;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(@yellow-color, 10%);
+  }
 }

@@ -1,24 +1,24 @@
 const ENTER_KEY_CODE = 13;
 const BACKSPACE_KEY_CODE = 8;
 
-const field = document.querySelector('.field');
-const input = document.querySelector('.field__input');
+const field = document.querySelector('.tags');
+const input = document.querySelector('.tags__input');
 
 const generateNewTag = tagValue => {
   const newTag = document.createElement('div');
 
-  newTag.classList.add('tag');
+  newTag.classList.add('tags__item');
   newTag.title = tagValue;
 
   const newTagText = document.createElement('span');
 
-  newTagText.classList.add('tag__text');
+  newTagText.classList.add('tags__text');
   newTagText.textContent = tagValue;
   newTag.appendChild(newTagText);
 
   const newTagBtn = document.createElement('button');
 
-  newTagBtn.classList.add('tag__remove');
+  newTagBtn.classList.add('tags__remove');
   newTagBtn.textContent = 'remove';
   newTag.appendChild(newTagBtn);
 
@@ -27,7 +27,7 @@ const generateNewTag = tagValue => {
 
 input.addEventListener('keydown', evt => {
   if (evt.keyCode === BACKSPACE_KEY_CODE && input.value.length === 0) {
-    const tags = document.querySelectorAll('.tag');
+    const tags = document.querySelectorAll('.tags__item');
 
     if (tags.length > 0) {
       const lastTag = tags[tags.length - 1];
