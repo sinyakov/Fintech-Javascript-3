@@ -10,7 +10,7 @@
     "test": "npm run lint-html && npm run lint-css && npm run lint",
     "build": "gulp build",
     "start": "npm run build && gulp serve",
-    "deploy": "gulp deploy"
+    "deploy": "npm run build && gulp deploy"
   },
   "author": "",
   "license": "ISC",

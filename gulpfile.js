@@ -60,9 +60,9 @@ gulp.task('serve', () => {
 });
 
 gulp.task('deploy', () =>
-  gulp.src('$TRAVIS_BUILD_DIR/build/**').pipe(
+  gulp.src('build/**').pipe(
     rsync({
-      root: '$TRAVIS_BUILD_DIR/build/',
+      root: 'build/',
       username: 'root',
       hostname: '188.226.171.191',
       destination: '/var/www/tinkoff/',
