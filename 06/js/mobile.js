@@ -49,8 +49,9 @@ mobile.addEventListener('input', evt => {
     currentSymbolIndex += 1;
   }
 
-  console.log(currentSymbolIndex);
-
   mobile.value = `+7${maskArray.join('').slice(2, currentSymbolIndex)}`;
-  setCursor(selectionStart, evt.data.length);
+
+  if (!Number.isNaN(parseInt(evt.data, 10))) {
+    setCursor(selectionStart, evt.data.length);
+  }
 });
