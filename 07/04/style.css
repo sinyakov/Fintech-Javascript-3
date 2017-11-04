@@ -4,8 +4,10 @@ body {
   flex-direction: column;
   margin: 40px 0;
   background: rgb(77, 194, 146);
+  /*stylelint-disable */
   font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
     'Helvetica Neue', Arial, sans-serif;
+  /*stylelint-enable */
 }
 
 .main-title {
