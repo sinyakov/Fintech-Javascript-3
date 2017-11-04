@@ -61,12 +61,11 @@ const loadData = page => {
 };
 
 const GAP = 200;
-// let lastCall = Date.now();
+
 const scrollHandler = () => {
   if (!state.isLoading && !state.errors.length && badgesListElement.getBoundingClientRect().bottom - window.innerHeight <= GAP) {
     loadData(state.page);
   }
-  // lastCall = Date.now();
 };
 
 window.addEventListener('scroll', scrollHandler);
