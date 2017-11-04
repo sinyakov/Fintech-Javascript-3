@@ -1,24 +1,36 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet/less" type="text/css" href="./main.less" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js" ></script>
-    <script src="./main.js" ></script>
-    <title>Задание 7.4</title>
+    <title>facebook's repositories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 </head>
-<body>
-<h1>Скроллинг с подгрузкой</h1>
-<p>
-    Реализовать скроллинг с подргузкой содержимого при достижении нижней части страницы.
 
-    В качестве источника содержимого используйте github и список репозиториев facebook.
-    Для того, чтобы поиграться с API и возвращаемым содержимым, в консоли можете использовать следующие утилиты httpie и jq:
-    <br>
-    <code>http -p b "https://api.github.com/orgs/facebook/repos?page=1" | jq 'length'</code>
-    <br>
-    Нужно выводить список репозиториев (для каждого название, описание, ссылку, дату создания и дату последнего коммита).
-    Дизайн страницы - на ваш вкус.
-</p>
+<body>
+    <h1 class="main-title">facebook's repositories</h1>
+
+    <div class="badges-list"></div>
+
+    <div class="loader hidden"></div>
+    <p class="info hidden">That's all, folks!</p>
+    <p class="error hidden"></p>
+
+    <template id="badge-template" class="hidden">
+        <a class="badge">
+            <h2 class="badge__title"></h2>
+            <p class="badge__description"></p>
+            <div class="badge__meta">
+                <span class="badge__lastCommit"></span>
+                <span class="badge__date"></span>
+            </div>
+        </a>
+    </template>
+
+    <script src="./main.js"></script>
 </body>
+
 </html>

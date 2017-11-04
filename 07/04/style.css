@@ -1,0 +1,107 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0;
+  background: rgb(77, 194, 146);
+  font-family: Roboto, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+.main-title {
+  margin: 20px;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 960px;
+}
+
+.badge {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px 15px;
+  width: calc(50% - 20px);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  color: #333;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .badge {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+.badge__title {
+  margin: 0 0 10px;
+  width: 100%;
+  text-decoration: underline;
+  word-wrap: break-word;
+  font-size: 24px;
+}
+
+.badge:hover .badge__title {
+  text-decoration: none;
+}
+
+.badge__description {
+  overflow: hidden;
+  flex: 1;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+.badge__meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.loader {
+  margin: 8px;
+  width: 80px;
+  height: 80px;
+  border: solid 8px rgb(62, 133, 40);
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  animation: rotate360 1s infinite linear;
+}
+
+.info {
+  margin: 40px 0;
+  font-size: 24px;
+}
+
+.error {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 960px;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
