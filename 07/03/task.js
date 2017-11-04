@@ -15,6 +15,4 @@ const throttle = (time, callback) => {
   };
 };
 
-/* WTF */
-
 module.exports = { throttle };
